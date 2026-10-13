@@ -209,10 +209,10 @@ flowchart LR
     A[pcap tại snapshot t] --> B[Parse gói TCP<br/>gom theo 5-tuple]
     B --> C[Gán nhãn gói<br/>theo metadata CIC/ACI]
     C --> D[Strip header<br/>giữ 25 byte, /255]
-    D --> E[Ô hướng 50-d<br/>fwd: x|0, bwd: 0|x]
-    E --> F2[G_t,2: luồng ≥2 gói<br/>edge dim 100]
-    E --> F3[G_t,3: luồng ≥3 gói<br/>edge dim 150]
-    E --> F8[... G_t,8: luồng ≥8 gói<br/>edge dim 400]
+    D --> E["Ô hướng 50-d<br/>fwd: x|0, bwd: 0|x"]
+    E --> F2["G_t,2: luồng ≥2 gói<br/>edge dim 100"]
+    E --> F3["G_t,3: luồng ≥3 gói<br/>edge dim 150"]
+    E --> F8["... G_t,8: luồng ≥8 gói<br/>edge dim 400"]
 ```
 
 ```
